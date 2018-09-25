@@ -1,0 +1,82 @@
+{
+	"name": "ngx-ow",
+	"version": "0.0.0",
+	"description": "Angular form validation on steroids",
+	"license": "MIT",
+	"repository": "SamVerschueren/ngx-ow",
+	"author": {
+		"name": "Sam Verschueren",
+		"email": "sam.verschueren@gmail.com"
+	},
+	"engines": {
+		"node": ">=6"
+	},
+	"scripts": {
+		"pretest": "npm run compile -- --sourceMap",
+		"test": "npm run lint && ava dist/test.js",
+		"lint": "tslint -p . --format stylish",
+		"compile": "npm run clean && tsc",
+		"clean": "del-cli dist",
+		"build": "npm run clean && ng-packagr -p package.json",
+		"release": "npm run build && cd dist && npm publish && cd .."
+	},
+	"keywords": [
+		"angular",
+		"ng",
+		"ngx",
+		"form",
+		"validation",
+		"type",
+		"types",
+		"check",
+		"checking",
+		"guard",
+		"guards",
+		"assert",
+		"assertion",
+		"predicate",
+		"predicates",
+		"is",
+		"validate",
+		"validation",
+		"utility",
+		"util",
+		"typeof",
+		"instanceof",
+		"object"
+	],
+	"peerDependencies": {
+		"@angular/forms": "^6.1.8",
+		"ow": "^0.6.0",
+		"typescript": "^2.7.2"
+	},
+	"devDependencies": {
+		"@angular/common": "^6.1.8",
+		"@angular/compiler": "^6.1.8",
+		"@angular/compiler-cli": "^6.1.8",
+		"@angular/core": "^6.1.8",
+		"@angular/forms": "^6.1.8",
+		"@angular/platform-browser": "^6.1.8",
+		"@types/node": "^10.10.1",
+		"ava": "^1.0.0-beta.8",
+		"del-cli": "^1.1.0",
+		"ng-packagr": "^4.2.0",
+		"ow": "^0.6.0",
+		"rxjs": "^6.3.2",
+		"tslint": "^5.11.0",
+		"tslint-xo": "^0.9.0",
+		"typescript": "^2.9.0"
+	},
+	"ngPackage": {
+		"lib": {
+			"entryFile": "source/index.ts"
+		}
+	},
+	"ava": {
+		"babel": false,
+		"compileEnhancements": false,
+		"require": [
+			"esm"
+		]
+	}
+}

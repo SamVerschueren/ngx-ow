@@ -1,0 +1,9 @@
+{
+	"extends": "tslint-xo",
+	"rules": {
+		"no-stateless-class": false,
+		"no-unnecessary-class": false,
+		"no-reference": false,
+		"only-arrow-functions": false
+	}
+}
