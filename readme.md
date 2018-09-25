@@ -11,6 +11,16 @@ Use [Ow](https://github.com/sindresorhus/ow) to easily validate your Angular for
 $ npm install ow ngx-ow
 ```
 
+### Buffer
+
+`Ow` is using a dependency which relies on `Buffer` being available in the browser. Install the `buffer` package and add the following lines to `polyfills.ts`.
+
+```ts
+import {Buffer} from 'buffer';
+
+(window as any).Buffer = Buffer;
+```
+
 
 ## Usage
 
