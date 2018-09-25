@@ -1,6 +1,6 @@
 {
 	"name": "ngx-ow",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"description": "Angular form validation on steroids",
 	"license": "MIT",
 	"repository": "SamVerschueren/ngx-ow",
