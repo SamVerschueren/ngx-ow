@@ -11,16 +11,6 @@ Use [Ow](https://github.com/sindresorhus/ow) to easily validate your Angular for
 $ npm install ow ngx-ow
 ```
 
-### Buffer
-
-`Ow` is using a dependency which relies on `Buffer` being available in the browser. Install the `buffer` package and add the following lines to `polyfills.ts`.
-
-```ts
-import {Buffer} from 'buffer';
-
-(window as any).Buffer = Buffer;
-```
-
 
 ## Usage
 
@@ -44,10 +34,10 @@ export class SignUpComponent implements OnInit {
 
 	ngOnInit() {
 		this.form = this.formBuilder.group({
-			firstName: ['', owValidator(ow.string.nonEmpty.label('firstName'))],
-			name: ['', owValidator(ow.string.nonEmpty.label('name'))],
-			email: ['', owValidator(ow.string.nonEmpty.includes('@').label('email'))],
-			password: ['', owValidator(ow.string.minLength(6).label('password'))]
+			firstName: ['', owValidator('firstNameRequired', ow.string.nonEmpty)],
+			name: ['', owValidator('nameRequired', ow.string.nonEmpty)],
+			email: ['', owValidator('emailInvalid', ow.string.nonEmpty.includes('@'))],
+			password: ['', owValidator('passwordInvalid', ow.string.minLength(6))]
 		});
 	}
 }
@@ -57,7 +47,7 @@ If someone enters an invalid email address, the errors object for the `email` co
 
 ```json
 {
-	"email": "Expected string `email` to include `@`, got `hello`"
+	"emailInvalid": "Expected string to include `@`, got `hello`"
 }
 ```
 

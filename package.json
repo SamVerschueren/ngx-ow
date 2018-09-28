@@ -46,8 +46,8 @@
 		"object"
 	],
 	"peerDependencies": {
-		"@angular/forms": "^6.1.8",
-		"ow": "^0.6.0",
+		"@angular/forms": "^6.0.0",
+		"ow": "^0.7.0",
 		"typescript": "^2.7.2"
 	},
 	"devDependencies": {
@@ -61,7 +61,7 @@
 		"ava": "^1.0.0-beta.8",
 		"del-cli": "^1.1.0",
 		"ng-packagr": "^4.2.0",
-		"ow": "^0.6.0",
+		"ow": "^0.7.0",
 		"rxjs": "^6.3.2",
 		"tslint": "^5.11.0",
 		"tslint-xo": "^0.9.0",
